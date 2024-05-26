@@ -19,7 +19,7 @@ if(isset($_POST['ajaxsend']) && $_POST['ajaxsend']==true){
 }
 
 try{
-$db = new PDO('sqlite:Chatdb.db');
+$db = new PDO('sqlite:Chatdb.db');//Your db file name
  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $result = $db->query("SELECT `user_name`, `msg`,`time`,`date` FROM `Chat`");
  
